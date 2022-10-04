@@ -58,10 +58,17 @@
 		<article class="art">
 			<h1>Thứ trưởng Bộ Ngoại giao Tô Anh Dũng bị đề nghị kỷ luật</h1>
 			<div class="tool">
-				<strong>Theo UBKTTW</strong>
-				<span class="social">
-					27/07/2022
-				</span>
+				<strong>Theo UBKTTW . 27/07/2022</strong>
+				<div class="social">
+					<i class="icon-font"><img src="images/icon-font.png" title="Tăng font chữ"> <img src="images/icon-font-de.png" title="Giảm font chữ"></i>
+					<i class="icon-sound"><img src="images/icon-sound.svg" title="Nghe audio"></i>
+					<div class="audio">
+						<span class="close-audio"></span>
+						<audio id="audio" controls>
+							<source src="audio/1.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</div>
 			</div>
 			<p class="sum">TTO - Ủy ban Kiểm tra Trung ương đề nghị Ban Bí thư xem xét, thi hành kỷ luật các ông Tô Anh Dũng, thứ trưởng Bộ Ngoại giao, và Nguyễn Quang Linh, trợ lý phó thủ tướng thường trực Chính phủ, liên quan việc tổ chức các chuyến bay giải cứu trong dịch.</p>
 			<p>Trong các ngày 23 và 26-9, tại Hà Nội, Ủy ban Kiểm tra Trung ương đã họp kỳ thứ 20 do ông Trần Cẩm Tú - ủy viên Bộ Chính trị, bí thư Trung ương Đảng, chủ nhiệm Ủy ban Kiểm tra Trung ương - chủ trì.</p>
@@ -74,7 +81,23 @@
 		</article>
 	</div>
 	
-
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		var audio = $("#audio")[0];
+		$(".icon-sound").click(function () {
+			$(".tool").addClass ("active");
+			audio.play();
+			
+		});
+		$(".close-audio").click(function () {
+			$(".tool").removeClass ("active");
+			audio.pause();
+		});
+		$(".icon-font").click(function () {
+			$(".art").toggleClass("increase");
+		});
+		
+	</script>
 </body>
 
 </html>

@@ -58,11 +58,20 @@
 		<article class="art">
 			<h1>Chủ tịch nước Nguyễn Xuân Phúc: Việt Nam ghi nhớ tình cảm, đóng góp quan trọng của cố Thủ tướng Abe</h1>
 			<div class="tool">
-				<strong>ANH THƯ</strong>
-				<span class="social">
-					27/07/2022
-				</span>
+				<strong>ANH THƯ . 27/07/2022</strong>
+				<div class="social">
+					<i class="icon-font"><img src="images/icon-font.png" title="Tăng font chữ"> <img src="images/icon-font-de.png" title="Giảm font chữ"></i>
+					<i class="icon-sound"><img src="images/icon-sound.svg" title="Nghe audio"></i>
+					<div class="audio">
+						<span class="close-audio"></span>
+						<audio id="audio" controls>
+							<source src="audio/1.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</div>
+				
 			</div>
+			
 			<p class="sum">TTO - Trong thời gian ở Nhật Bản tham dự lễ quốc tang cố Thủ tướng Abe Shinzo, ngày 26-9, Chủ tịch nước Nguyễn Xuân Phúc đã hội đàm với Thủ tướng Nhật Bản Kishida Fumio, theo thông tin từ Bộ Ngoại giao.</p>
 			<figure class="img">
 				<img src="images/1/1.jpg" title="">
@@ -95,8 +104,23 @@
 			<p>Hai bên cũng nhất trí sẽ tiếp tục phối hợp chặt chẽ trong các vấn đề quốc tế, ủng hộ vai trò và lập trường của ASEAN, góp phần vào hòa bình, ổn định, hợp tác và phát triển ở khu vực trên thế giới.</p>
 		</article>
 	</div>
-	
-
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		var audio = $("#audio")[0];
+		$(".icon-sound").click(function () {
+			$(".tool").addClass ("active");
+			audio.play();
+			
+		});
+		$(".close-audio").click(function () {
+			$(".tool").removeClass ("active");
+			audio.pause();
+		});
+		$(".icon-font").click(function () {
+			$(".art").toggleClass("increase");
+		});
+		
+	</script>
 </body>
 
 </html>

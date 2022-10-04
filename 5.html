@@ -58,10 +58,18 @@
 		<article class="art">
 			<h1>Lan đột biến và những trò thao túng thần sầu trong bóng tối</h1>
 			<div class="tool">
-				<strong>AN DU</strong>
-				<span class="social">
-					27/07/2022
-				</span>
+				<strong>AN DU . 27/07/2022</strong>
+				
+				<div class="social">
+					<i class="icon-font"><img src="images/icon-font.png" title="Tăng font chữ"> <img src="images/icon-font-de.png" title="Giảm font chữ"></i>
+					<i class="icon-sound"><img src="images/icon-sound.svg" title="Nghe audio"></i>
+					<div class="audio">
+						<span class="close-audio"></span>
+						<audio id="audio" controls>
+							<source src="audio/4.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+				</div>
 			</div>
 			<p class="sum">TTO - Dù đã có rất nhiều cảnh báo nhưng lan đột biến vẫn khiến rất nhiều người tán gia bại sản, trong lúc nhiều "trùm cuối" được lan truyền trúng cả ngàn tỉ đồng hoặc nhiều hơn. Vậy mà vẫn còn nhiều sản phẩm nông nghiệp đang được đẩy giá tương tự...</p>
 			<figure class="img">
@@ -81,7 +89,23 @@
 			
 		</article>
 	</div>
-	
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		var audio = $("#audio")[0];
+		$(".icon-sound").click(function () {
+			$(".tool").addClass ("active");
+			audio.play();
+			
+		});
+		$(".close-audio").click(function () {
+			$(".tool").removeClass ("active");
+			audio.pause();
+		});
+		$(".icon-font").click(function () {
+			$(".art").toggleClass("increase");
+		});
+		
+	</script>
 
 </body>
 
