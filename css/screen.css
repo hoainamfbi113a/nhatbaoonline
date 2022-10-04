@@ -201,7 +201,7 @@ footer {
     line-height: 1.75;
 }
 .art.increase {
-    font-size: 20px;
+    font-size: 22px;
 }
 .art.increase .social i.icon-font img:nth-child(2) {
     display: block;
@@ -210,7 +210,7 @@ footer {
     display: none;
 }
 .art.increase figcaption {
-    font-size: 17px;
+    font-size: 19px;
 }
 .art h1 {
     font-family: 'Playfair Display', serif;
@@ -542,8 +542,8 @@ html[xmlns] .clearfix {
         background: #fff;
     }
     .art h1 {
-        line-height: 1.2;
-        font-size: 40px;
+        line-height: 1.3;
+        font-size: 38px;
         padding-left: 10px;
         padding-right: 10px;
     }
