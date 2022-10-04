@@ -304,12 +304,13 @@ footer {
    margin-left: 25px;
    align-items: center;
 }
+.social i.icon-font img {
+    max-width: 20px;
+}
 .social i.icon-font img:nth-child(2) {
     display: none;
 }
-.social i.icon-sound {
-    margin-top: 1px;
-}
+
 
 
 .sum {
